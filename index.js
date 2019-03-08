@@ -25,7 +25,7 @@ bot.command("orderopen", ctx => {
 });
 
 bot.start(ctx => ctx.reply("Hello"));
-bot.command("hello", context => context.reply("booo..."));
+bot.command("hello", context => context.reply("hello to you too!!"));
 if (process.env.NODE_ENV === "production") {
   bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
   bot.startWebhook(`/bot${API_TOKEN}`, null, PORT);
