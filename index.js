@@ -2,8 +2,8 @@ require('newrelic');
 const Telegraf = require("telegraf");
 
 const PORT = process.env.PORT || 3000;
-const URL = process.env.URL || "https://cs-solex-bot.herokuapp.com";
-const API_TOKEN = "630082018:AAEPN7VB-Lhg8qY_ye5BXEdecen0UASYt6g";
+const URL = process.env.URL || "https://shaunbot1.herokuapp.com";
+const API_TOKEN = "697351660:AAHIU27aTT8OFIff-SZqd_UhGonuGQU_uFY";
 const bot = new Telegraf(API_TOKEN);
 
 bot.use(Telegraf.log());
@@ -25,7 +25,7 @@ bot.command("orderopen", ctx => {
 });
 
 bot.start(ctx => ctx.reply("Hello"));
-
+bot.command("hello", context => context.reply("booo..."));
 if (process.env.NODE_ENV === "production") {
   bot.telegram.setWebhook(`${URL}/bot${API_TOKEN}`);
   bot.startWebhook(`/bot${API_TOKEN}`, null, PORT);
